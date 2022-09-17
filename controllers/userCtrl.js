@@ -18,6 +18,7 @@ const showPosts = (req,res) => {
 }
 
 const signUp = (req, res) =>{
+  console.log('BODY',req.body)
     const user = new User(req.body);
     user.save()
     const token = createJWT(user)
