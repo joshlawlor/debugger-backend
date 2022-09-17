@@ -26,7 +26,7 @@ const showOne = (req,res) => {
 }
 
 const create = (req, res) => {
-    console.log('Create function ran')
+    console.log('Create function ran', req.user)
     const post = new Post(req.body)
     post.author.push(req.user.username)
     
